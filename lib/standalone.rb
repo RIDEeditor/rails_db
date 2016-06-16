@@ -32,14 +32,14 @@ module Standalone
     ActiveRecord::Base.establish_connection(db_env)
     RailsDb.use_default_configuration!
 
-    begin
-      require 'launchy'
-      Launchy.open("http://#{HOST}:#{PORT}/rails/db")
-    rescue Exception
-      puts 'Please run `gem install launchy` to have the browser window opened automatically at launch'
-      # silence
-      # in case it won't work
-    end
+    #begin
+    #  require 'launchy'
+    #  Launchy.open("http://#{HOST}:#{PORT}/rails/db")
+    #rescue Exception
+    #  puts 'Please run `gem install launchy` to have the browser window opened automatically at launch'
+    #  # silence
+    #  # in case it won't work
+    #end
 
     puts "Starting RailsDB on #{"http://#{HOST}:#{PORT}/rails/db"} ...".green
 
